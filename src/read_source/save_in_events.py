@@ -48,7 +48,7 @@ def save_in_events(input_dir):
             print(f"reading {read_file}")
 
             # Read and process the file
-            temp = read_and_filter(read_file, max=500, chunk_size=1000)
+            temp = read_and_filter(read_file, max=250, chunk_size=1000)
 
             processed_vectors = []
 

@@ -14,7 +14,7 @@ def get_max_hit_index(hits_dict):
 def main():
     save_in_events(DEFAULT_DIR)
     vector_to_search = get_vector_by_index(npz_path="../temp/2697049_SARS-CoV-31.npz", index=0)
-    matching_dict = save_in_hits(input_dir=DEFAULT_DIR, vector=vector_to_search)
+    matching_dict = save_in_hits_average(input_dir=DEFAULT_DIR, vector=vector_to_search)
     file_name, hits_dict, all_dicts = matching_dict
     index = get_max_hit_index(hits_dict)
     file_name = f"../data/{file_name}"
@@ -24,6 +24,9 @@ def main():
 
     print("best_match:")
     print(file_name)
+    print(all_dicts)
+    print(hits_dict)
+    print(get_max_hit_index(hits_dict))
 
 
 main()
